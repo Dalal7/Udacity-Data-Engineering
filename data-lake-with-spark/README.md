@@ -1,4 +1,4 @@
-# Project: Data Lake
+# Project: Data Lake with Spark
 
 
 ## Introduction
