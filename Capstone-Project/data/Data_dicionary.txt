@@ -1,0 +1,49 @@
+Data Dictionary
+
+Fact table:
+
+- City table:
+        city_id: VARCHAR, unique character ID for the destination US city
+        city_name: VARCHAR, the name of the city
+        state: VARCHAR, the state in which the city is located
+        average_temperature: FLOAT, the average temperature of the city
+        temperature_datetime: DATETIME, the date of the recorded temperature
+        major_race: INT, the major race of the city, can be (White, American Indian and Alaska Native, Asian, Hispanic or Latino, Black or African-American)
+        total_population: INT, A number of the total population of the city
+        total_immigrants: INT, A number of the total immigration of the city
+
+Dimensions tables:
+
+- Immigrant table:
+        immigrant_id: VARCHAR, unique character ID for the immigrant
+        gender: VARCHAR(1), a single character for the immigrant gender (can be M or F)
+        age: INT, a number for the immigrant age 
+        arrival_date: DATE, the arrival Date in the USA
+        departure_date: DATE, the Departure Date from the USA
+        orign_city: VARCHAR , the name of the orign city
+        desination_city: VARCHAR, the name of the destiation city
+        state_code: VARCHAR(2), 2 characters represent the state of the destiation city
+        visa_type: INT, Visa codes collapsed into three categories:(1 = Business, 2 = Pleasure, 3 = Student, transport_mode INT);
+        transport_mode: INT, the mode of the transportation, can be (1 = 'Air', 2 = 'Sea', 3 = 'Land', 9 = 'Not reported')
+
+- Temperature table
+        temperature_id: VARCHAR, unique character ID for the temperature
+        datetime DATE: the date of the recorded temperature
+        average_temperature: FLOAT, the average temperature of US cities in celsius
+        average_temperature_uncertainty: FLOAT, the 95% confidence interval around the average
+        city: VARCHAR, the name of the city
+        country: VARCHAR, the name of the country
+        latitude: VARCHAR, the latitude of the city
+        longitude: VARCHAR, the longitude of the city
+
+- Demographic table:
+        demographic_id: VARCHAR, unique character ID for the demographic
+        city: VARCHAR, the name of the city   
+        state: VARCHAR, the name of the state
+        median_age: FLOAT , the median age of the population in the city
+        female_population: INT, the total number of female in the city
+        male_population: INT, the total number of male in the city
+        total_population: INT, the total number of people in the city
+        foreign_born: INT, the number of those who born outside of the US 
+        state_code: VARCHAR(2), 2 characters represent the state of the city
+        major_race: VARCHAR, the major race of the city, can be (White, American Indian and Alaska Native, Asian, Hispanic or Latino, Black or African-American)
