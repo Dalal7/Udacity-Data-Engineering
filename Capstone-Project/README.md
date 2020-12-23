@@ -30,7 +30,7 @@ The goal of the final analytics tables is to answer questions like the following
 * Amazon Simple Storage Service (S3): used to store the datasets after processing.
 
 #### Data Model
-![Data_model_image](pics/data_model.png)
+![Data_model_image](pics/data_model.png) </br>
 I used a star schema as the data model for this project. It consists of one fact table which is the City table, and it's referencing 3 dimensions tables which are demographic, temperature, and immigrants. I chose the star schema as it is simple and easy for end-users to understand, as well as for its good query performance since it has few tables and clear join paths.
 
 #### Data Pipeline
@@ -42,5 +42,6 @@ I used a star schema as the data model for this project. It consists of one fact
 4- Create the airflow connections aws_default and redshift.</br>
 ![aws_default_image](pics/aws_default.jpg)</br>
 </br>
-![redshift_image](pics/redshift.jpg)
+![redshift_image](pics/redshift.jpg) </br>
+</br>
 5- Run the ```Capstone_dag.py``` using the Airflow web UI.</br>
